@@ -1,15 +1,20 @@
 <?php 
-$n = 20;
+$n = 5;
 $f1 = 0;
 $f2 = 1;
 // $fn = $f1 + $f2;
-echo $f1 . ",". $f2 .",";
+// echo $f1 . ",". $f2 .",";
 
 for ($i = $f1; $i < $n;$i++){
-	$fn = $f1 + $f2;
+	if($i < 2){
+		$fn = $i;
+	}else{
 
-	$f1 = $f2;
-	$f2 = $fn;
+		$fn = $f1 + $f2;
+
+		$f1 = $f2;
+		$f2 = $fn;
+	}
 
 	echo $fn.",";
 }
@@ -34,6 +39,6 @@ for ($i = $f1; $i < $n;$i++){
 // 	return $fibonacci;
 // }
 
-// echo implode(fibonacci(5));
+// echo implode(fibonacci(2));
 
  ?>
